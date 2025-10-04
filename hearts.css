@@ -1,0 +1,21 @@
+/* warstwa serc — pod głównym kontentem; main powinien mieć wyższy z-index */
+.hearts-layer{
+    position:fixed;
+    inset:0;
+    pointer-events:none; /* serca nie blokują interakcji */
+    z-index:1; /* ustawić niżej niż main (main -> z-index:2) */
+}
+
+/* pojedyncze serce */
+.heart{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    user-select:none;
+    pointer-events:none;
+    will-change: transform, opacity;
+    transform-origin:center;
+    opacity:0.98;
+    text-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
